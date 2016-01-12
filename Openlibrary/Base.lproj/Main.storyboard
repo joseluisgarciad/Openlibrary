@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dyi-w3-p2E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Peticion-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewPeticion" customModule="Openlibrary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-Uq-Fet">
+                                <rect key="frame" x="346" y="381" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="oQP-bk-nlf"/>
+                                </constraints>
+                                <state key="normal" title="Buscar ISBN"/>
+                                <connections>
+                                    <action selector="ButtonBuscarISBN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKa-Kp-ljn"/>
+                                    <segue destination="10M-Oq-Ji3" kind="show" id="eJW-Ir-itd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-Rl-avi">
+                                <rect key="frame" x="162" y="263" width="276" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="zzu-DI-2cJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="yTf-ec-fGJ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduzca el ISBN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNl-Mf-JWG">
+                                <rect key="frame" x="230" y="189" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32V-ve-aZG">
+                                <rect key="frame" x="162" y="381" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="Rhe-4c-ctx"/>
+                                </constraints>
+                                <state key="normal" title="Limpiar"/>
+                                <connections>
+                                    <action selector="ButtonLimpiar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJA-RB-PSn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pkg-Rl-avi" firstAttribute="leading" secondItem="32V-ve-aZG" secondAttribute="leading" id="08A-RK-WiM"/>
+                            <constraint firstItem="pkg-Rl-avi" firstAttribute="centerX" secondItem="uNl-Mf-JWG" secondAttribute="centerX" id="Ids-0s-O3M"/>
+                            <constraint firstItem="mOg-Uq-Fet" firstAttribute="baseline" secondItem="32V-ve-aZG" secondAttribute="baseline" id="VhG-S4-vsL"/>
+                            <constraint firstItem="pkg-Rl-avi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bhX-yD-HvQ"/>
+                            <constraint firstItem="pkg-Rl-avi" firstAttribute="top" secondItem="uNl-Mf-JWG" secondAttribute="bottom" constant="53" id="cMT-Go-zUS"/>
+                            <constraint firstItem="pkg-Rl-avi" firstAttribute="trailing" secondItem="mOg-Uq-Fet" secondAttribute="trailing" id="fll-Ml-5Dx"/>
+                            <constraint firstItem="uNl-Mf-JWG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="125" id="oes-hZ-yZa"/>
+                            <constraint firstItem="32V-ve-aZG" firstAttribute="top" secondItem="pkg-Rl-avi" secondAttribute="bottom" constant="88" id="zDF-zu-7ef"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jaR-Nm-qMT"/>
+                    <connections>
+                        <outlet property="TextoISBN" destination="pkg-Rl-avi" id="yku-wr-YTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1087" y="290"/>
+        </scene>
+        <!--View DatosISBN-->
+        <scene sceneID="nvQ-Yz-Du8">
+            <objects>
+                <viewController id="10M-Oq-Ji3" customClass="ViewDatosISBN" customModule="Openlibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnD-tg-C6w"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJ7-ED-og6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BZ1-yI-YsT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uOL-Jy-kck">
+                                <rect key="frame" x="10" y="72" width="581" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uOL-Jy-kck" firstAttribute="top" secondItem="cnD-tg-C6w" secondAttribute="bottom" constant="8" id="GH6-UG-YDP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uOL-Jy-kck" secondAttribute="trailing" constant="-11" id="IO6-Go-Xai"/>
+                            <constraint firstItem="uOL-Jy-kck" firstAttribute="bottom" secondItem="EJ7-ED-og6" secondAttribute="top" constant="-8" id="SBF-o7-d9c"/>
+                            <constraint firstItem="uOL-Jy-kck" firstAttribute="leading" secondItem="BZ1-yI-YsT" secondAttribute="leading" constant="10" id="kNU-Cp-X2j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ViewTextISBN" destination="uOL-Jy-kck" id="RPi-k8-259"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbQ-iE-WPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="290"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="thR-3C-LvN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dyi-w3-p2E" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eWg-n7-sKu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Chf-ye-r2b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBH-l2-cxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="290"/>
         </scene>
     </scenes>
 </document>

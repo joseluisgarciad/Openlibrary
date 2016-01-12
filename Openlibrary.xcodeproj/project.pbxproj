@@ -15,6 +15,8 @@
 		8B81B2C01C442FCD006F6AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B81B2BE1C442FCD006F6AFE /* LaunchScreen.storyboard */; };
 		8B81B2CB1C442FCD006F6AFE /* OpenlibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B2CA1C442FCD006F6AFE /* OpenlibraryTests.swift */; };
 		8B81B2D61C442FCD006F6AFE /* OpenlibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B2D51C442FCD006F6AFE /* OpenlibraryUITests.swift */; };
+		8B81B2E41C45AD5F006F6AFE /* ViewPeticion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B2E31C45AD5F006F6AFE /* ViewPeticion.swift */; };
+		8B81B2E61C45ADEF006F6AFE /* ViewDatosISBN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81B2E51C45ADEF006F6AFE /* ViewDatosISBN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8B81B2D11C442FCD006F6AFE /* OpenlibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenlibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B81B2D51C442FCD006F6AFE /* OpenlibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenlibraryUITests.swift; sourceTree = "<group>"; };
 		8B81B2D71C442FCD006F6AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B81B2E31C45AD5F006F6AFE /* ViewPeticion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPeticion.swift; sourceTree = "<group>"; };
+		8B81B2E51C45ADEF006F6AFE /* ViewDatosISBN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDatosISBN.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				8B81B2B21C442FCD006F6AFE /* AppDelegate.swift */,
 				8B81B2B41C442FCD006F6AFE /* ViewController.swift */,
 				8B81B2B61C442FCD006F6AFE /* Main.storyboard */,
+				8B81B2E51C45ADEF006F6AFE /* ViewDatosISBN.swift */,
+				8B81B2E31C45AD5F006F6AFE /* ViewPeticion.swift */,
 				8B81B2BC1C442FCD006F6AFE /* Assets.xcassets */,
 				8B81B2BE1C442FCD006F6AFE /* LaunchScreen.storyboard */,
 				8B81B2C11C442FCD006F6AFE /* Info.plist */,
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B81B2E61C45ADEF006F6AFE /* ViewDatosISBN.swift in Sources */,
 				8B81B2B51C442FCD006F6AFE /* ViewController.swift in Sources */,
 				8B81B2B31C442FCD006F6AFE /* AppDelegate.swift in Sources */,
 				8B81B2BB1C442FCD006F6AFE /* Openlibrary.xcdatamodeld in Sources */,
+				8B81B2E41C45AD5F006F6AFE /* ViewPeticion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +499,7 @@
 				8B81B2DC1C442FCD006F6AFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B81B2DD1C442FCD006F6AFE /* Build configuration list for PBXNativeTarget "OpenlibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +508,7 @@
 				8B81B2DF1C442FCD006F6AFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B81B2E01C442FCD006F6AFE /* Build configuration list for PBXNativeTarget "OpenlibraryUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +517,7 @@
 				8B81B2E21C442FCD006F6AFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
