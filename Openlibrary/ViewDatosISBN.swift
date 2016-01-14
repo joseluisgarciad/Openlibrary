@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewDatosISBN: UIViewController {
+    var inputISBN:String = ""
+    
+    override func viewWillAppear(animated: Bool) {
+        ViewTextISBN.text = inputISBN
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
