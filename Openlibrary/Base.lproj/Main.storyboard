@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
                                     <action selector="ButtonBuscarISBN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKa-Kp-ljn"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-Rl-avi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-Rl-avi">
                                 <rect key="frame" x="196" y="258" width="208" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="208" id="LN8-ee-Qjf"/>
@@ -97,14 +98,14 @@
                                 <exclude reference="A1t-iD-3OC"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="c4d-ZD-jJZ"/>
-                                <exclude reference="oDp-hN-dnD"/>
-                                <exclude reference="ZBE-Fc-HDi"/>
                                 <exclude reference="HmP-1u-6wX"/>
                                 <exclude reference="jJF-SJ-Dyn"/>
                                 <exclude reference="1Fp-MG-8V7"/>
                                 <exclude reference="DA9-b6-0g9"/>
                                 <exclude reference="sN8-mw-AxU"/>
+                                <exclude reference="c4d-ZD-jJZ"/>
+                                <exclude reference="oDp-hN-dnD"/>
+                                <exclude reference="ZBE-Fc-HDi"/>
                                 <exclude reference="JRg-28-o5G"/>
                                 <exclude reference="RIe-de-rtH"/>
                                 <exclude reference="kdD-8W-pJI"/>
